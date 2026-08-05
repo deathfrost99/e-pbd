@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistem Semakan Keputusan PBD</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="page-wrapper">
+
+        <!-- Bahagian carian -->
+        <section class="search-card" id="searchSection">
+
+            <div class="school-logo">
+                <img src="images/logo.png" alt="Logo sekolah" id="schoolLogo">
+            </div>
+
+            <p class="system-label">e-PBD</p>
+
+            <h1>Sistem Semakan Keputusan PBD</h1>
+
+            <p class="school-name">
+                Sekolah Kebangsaan Putrajaya Presint 18(1)
+            </p>
+
+            <div class="divider"></div>
+
+            <form id="searchForm">
+
+                <label for="studentId">
+                    No. Kad Pengenalan Murid
+                </label>
+
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Contoh: 150101101234"
+                    inputmode="numeric"
+                    maxlength="12"
+                    autocomplete="off"
+                >
+
+                <p class="input-help">
+                    Masukkan 12 digit nombor MyKid/MyKad tanpa tanda “-” atau ruang.
+                </p>
+
+                <button type="submit" id="searchButton">
+                    Semak Keputusan
+                </button>
+
+            </form>
+
+            <div class="message hidden" id="messageBox"></div>
+
+        </section>
+
+
+        <!-- Bahagian loading -->
+        <section class="loading-card hidden" id="loadingSection">
+
+            <div class="spinner"></div>
+
+            <p>Menyemak rekod murid...</p>
+
+        </section>
+
+
+        <!-- Bahagian keputusan -->
+        <section class="result-card hidden" id="resultSection">
+
+            <div class="result-header">
+
+                <img src="images/logo.png" alt="Logo sekolah">
+
+                <div>
+                    <p class="result-small-title">Laporan Keputusan</p>
+
+                    <h2>Pentaksiran Bilik Darjah</h2>
+
+                    <p>Sekolah Kebangsaan Putrajaya Presint 18(1)</p>
+                </div>
+
+            </div>
+
+            <div class="student-info">
+
+                <div>
+                    <span>Nama Murid</span>
+                    <strong id="resultName">-</strong>
+                </div>
+
+                <div>
+                    <span>No. Kad Pengenalan</span>
+                    <strong id="resultId">-</strong>
+                </div>
+
+                <div>
+                    <span>Kelas</span>
+                    <strong id="resultClass">-</strong>
+                </div>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Bil.</th>
+                            <th>Mata Pelajaran</th>
+                            <th>Markah</th>
+                            <th>Gred</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-box">
+                    <span>Jumlah Markah</span>
+                    <strong id="totalMarks">0</strong>
+                </div>
+
+                <div class="summary-box">
+                    <span>Purata</span>
+                    <strong id="averageMarks">0</strong>
+                </div>
+
+                <div class="summary-box">
+                    <span>Prestasi</span>
+                    <strong id="performanceText">-</strong>
+                </div>
+
+            </div>
+
+            <div class="result-actions">
+
+                <button type="button" class="secondary-button" id="backButton">
+                    Semakan Baharu
+                </button>
+
+                <button type="button" id="printButton">
+                    Cetak Keputusan
+                </button>
+
+            </div>
+
+            <p class="result-note">
+                Keputusan ini adalah untuk tujuan semakan sahaja.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 e-PBD SK Putrajaya Presint 18(1)
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
