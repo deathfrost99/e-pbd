@@ -405,7 +405,7 @@ footer {
 
     .search-card,
     .result-card {
-        padding: 24px;
+        padding: 18px;
         border-radius: 18px;
     }
 
@@ -448,5 +448,61 @@ footer {
     footer,
     .result-note {
         display: none;
+    }
+}
+
+/* Paparan jadual khas untuk telefon */
+@media (max-width: 600px) {
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        padding: 10px 5px;
+        font-size: 0.78rem;
+    }
+
+    /* Sembunyikan kolum Bil. pada telefon */
+    th:nth-child(1),
+    td:nth-child(1) {
+        display: none;
+    }
+
+    /* Mata pelajaran */
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 58%;
+        text-align: left;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Markah */
+    th:nth-child(3),
+    td:nth-child(3) {
+        width: 21%;
+        text-align: center;
+    }
+
+    /* Gred */
+    th:nth-child(4),
+    td:nth-child(4) {
+        width: 21%;
+        text-align: center;
+    }
+
+    .grade-badge {
+        min-width: 38px;
+        padding: 4px 7px;
+        font-size: 0.72rem;
     }
 }
